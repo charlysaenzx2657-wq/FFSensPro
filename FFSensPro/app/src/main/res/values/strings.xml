@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FF Sens Pro</string>
+    <string name="scan_btn">Calculate My Sensitivity</string>
+    <string name="copy_btn">Copy All Settings</string>
+    <string name="tagline">CALIBRATE · DOMINATE · WIN</string>
+</resources>

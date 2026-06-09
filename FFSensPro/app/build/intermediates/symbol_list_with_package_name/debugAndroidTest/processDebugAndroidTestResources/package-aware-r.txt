@@ -1,0 +1,3 @@
+com.ffsens.pro.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
