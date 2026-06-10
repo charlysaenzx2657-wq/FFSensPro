@@ -1,6 +1,0 @@
-com.ffsens.pro.test.app-core-1.5.0-0 C:\Users\charl\.gradle\caches\8.9\transforms\2b659998543bb09f3bc5e5bb030b8b39\transformed\core-1.5.0\res
-com.ffsens.pro.test.app-annotation-experimental-1.3.0-1 C:\Users\charl\.gradle\caches\8.9\transforms\c0818526125ebac6383082d006f62e9d\transformed\annotation-experimental-1.3.0\res
-com.ffsens.pro.test.app-androidTest-2 C:\Users\charl\Desktop\FFSensPro\FFSensPro\app\build\generated\res\resValues\androidTest\debug
-com.ffsens.pro.test.app-mergeDebugAndroidTestResources-3 C:\Users\charl\Desktop\FFSensPro\FFSensPro\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.ffsens.pro.test.app-mergeDebugAndroidTestResources-4 C:\Users\charl\Desktop\FFSensPro\FFSensPro\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.ffsens.pro.test.app-debugAndroidTest-5 C:\Users\charl\Desktop\FFSensPro\FFSensPro\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
