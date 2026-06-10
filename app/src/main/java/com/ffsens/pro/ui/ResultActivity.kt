@@ -6,7 +6,6 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ffsens.pro.R
@@ -40,7 +39,7 @@ class ResultActivity : AppCompatActivity() {
         val fireBut    = intent.getIntExtra("FIRE_BUTTON", 155)
         val tier       = intent.getStringExtra("DEVICE_TIER") ?: "MID"
         val calScore   = intent.getIntExtra("CAL_SCORE", 75)
-        val deviceName = intent.getStringExtra("DEVICE_NAME") ?: getString(R.string.scanning)
+        val deviceName = intent.getStringExtra("DEVICE_NAME") ?: "Tu Dispositivo"
         val ffVersion  = intent.getStringExtra("FF_VERSION") ?: ""
         val ffMod      = intent.getBooleanExtra("FF_SUSPECTED_MOD", false)
         val tips       = intent.getStringArrayListExtra("TIPS") ?: arrayListOf()
@@ -78,14 +77,6 @@ class ResultActivity : AppCompatActivity() {
         binding.tvFreeRecoil.text = freeRecoil.toString()
         binding.tvLookJoy.text    = lookJoy.toString()
         binding.tvFireBut.text    = fireBut.toString()
-
-        fun prog(v: Int) = (v - 100).coerceIn(0, 100)
-        findViewById<ProgressBar>(R.id.barGeneral)?.progress    = prog(general)
-        findViewById<ProgressBar>(R.id.barRedDot)?.progress     = prog(redDot)
-        findViewById<ProgressBar>(R.id.barScope2x)?.progress    = prog(scope2x)
-        findViewById<ProgressBar>(R.id.barScope4x)?.progress    = prog(scope4x)
-        findViewById<ProgressBar>(R.id.barSniper)?.progress     = prog(sniper)
-        findViewById<ProgressBar>(R.id.barFreeRecoil)?.progress = prog(freeRecoil)
 
         if (tips.isNotEmpty()) {
             binding.tvTips.text = tips.joinToString("\n\n")
