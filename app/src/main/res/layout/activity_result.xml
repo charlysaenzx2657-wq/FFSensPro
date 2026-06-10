@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ff_black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back button -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/bg_icon_btn"
+            app:tint="@color/ff_orange"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/ff_dark_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/btnBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvDeviceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Device"
+                    android:textColor="@color/ff_white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/orbitron_bold" />
+
+                <TextView
+                    android:id="@+id/tvFfVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Free Fire"
+                    android:textColor="@color/ff_white"
+                    android:textSize="11sp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/badge_success" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTierBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔥 HIGH TIER"
+                        android:textColor="@color/ff_orange"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvCalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="85% Calibrated"
+                        android:textColor="@color/ff_green"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/orbitron_bold" />
+
+                </LinearLayout>
+
+                <!-- Calibration Bar -->
+                <ProgressBar
+                    android:id="@+id/barCalibration"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="12dp"
+                    android:progressTint="@color/ff_green"
+                    android:progressBackgroundTint="@color/ff_divider"
+                    android:progress="85" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Sensitivities Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSensitivities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/ff_dark_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎯 CALIBRATED SENSITIVITIES"
+                    android:textColor="@color/ff_orange"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:letterSpacing="0.08"
+                    android:paddingBottom="16dp" />
+
+                <!-- General -->
+                <include layout="@layout/item_sensitivity"
+                    android:id="@+id/rowGeneral" />
+
+                <include layout="@layout/item_sensitivity"
+                    android:id="@+id/rowRedDot" />
+
+                <include layout="@layout/item_sensitivity"
+                    android:id="@+id/rowScope2x" />
+
+                <include layout="@layout/item_sensitivity"
+                    android:id="@+id/rowScope4x" />
+
+                <include layout="@layout/item_sensitivity"
+                    android:id="@+id/rowSniper" />
+
+                <include layout="@layout/item_sensitivity"
+                    android:id="@+id/rowFreeRecoil" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Direct values card (for typing in game) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardValues"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/ff_dark_orange"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardSensitivities"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋 ENTER IN FREE FIRE"
+                    android:textColor="@color/ff_orange"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:paddingBottom="14dp" />
+
+                <!-- 2-column grid of values -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="General" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvGeneral" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="150"
+                            android:textColor="@color/ff_white" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold" android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="2x Scope" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvScope2x" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="130"
+                            android:textColor="@color/ff_white" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold" android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Sniper (8x)" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvSniper" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="105"
+                            android:textColor="@color/ff_white" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold"/>
+
+                    </LinearLayout>
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent"
+                        android:background="@color/ff_divider" android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Red Dot" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvRedDot" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="155"
+                            android:textColor="@color/ff_orange" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold" android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="4x Scope" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvScope4x" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="115"
+                            android:textColor="@color/ff_white" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold" android:layout_marginBottom="12dp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Free Recoil" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvFreeRecoil" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="145"
+                            android:textColor="@color/ff_white" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Look Joystick & Fire Button -->
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/ff_divider" android:layout_marginVertical="16dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Look Joystick" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvLookJoy" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="140"
+                            android:textColor="@color/ff_white" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Fire Button" android:textColor="@color/ff_gray" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvFireBut" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="155"
+                            android:textColor="@color/ff_orange" android:textSize="28sp"
+                            android:fontFamily="@font/orbitron_bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tips Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/ff_dark_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardValues"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 PRO TIPS FOR YOUR DEVICE"
+                    android:textColor="@color/ff_orange"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:paddingBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ff_gray_light"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Copy Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopy"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="📋  COPY ALL SETTINGS"
+            android:textColor="@color/ff_black"
+            android:textSize="14sp"
+            android:fontFamily="@font/orbitron_bold"
+            app:backgroundTint="@color/ff_orange"
+            app:cornerRadius="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintTop_toBottomOf="@id/cardTips"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

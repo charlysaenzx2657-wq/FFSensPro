@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FFSensPro" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ff_orange</item>
+        <item name="colorPrimaryVariant">@color/ff_orange_dim</item>
+        <item name="colorOnPrimary">@color/ff_black</item>
+        <item name="colorSecondary">@color/ff_orange_glow</item>
+        <item name="colorSurface">@color/ff_dark_card</item>
+        <item name="colorOnSurface">@color/ff_white</item>
+        <item name="android:windowBackground">@color/ff_black</item>
+        <item name="android:statusBarColor">@color/ff_black</item>
+        <item name="android:navigationBarColor">@color/ff_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/orbitron_regular</item>
+    </style>
+
+    <style name="Theme.FFSensPro.Splash" parent="Theme.FFSensPro">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

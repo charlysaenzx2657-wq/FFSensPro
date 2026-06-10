@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FF Sens Pro</string>
+
+    <!-- Splash -->
+    <string name="tagline">CALIBRA · DOMINA · GANA</string>
+
+    <!-- Main -->
+    <string name="header_title">FF SENS PRO</string>
+    <string name="header_subtitle">Calculadora de Sensibilidad con IA</string>
+    <string name="btn_scan">⚡  CALCULAR MI SENSIBILIDAD</string>
+    <string name="btn_copy">📋  COPIAR AJUSTES</string>
+    <string name="footer_note">100% seguro · Sin root · Sin modificar archivos del juego</string>
+    <string name="scanning">Escaneando...</string>
+
+    <!-- Scan steps -->
+    <string name="scan_cpu">Leyendo especificaciones del CPU...</string>
+    <string name="scan_screen">Midiendo métricas de pantalla...</string>
+    <string name="scan_ram">Analizando perfil de RAM...</string>
+    <string name="scan_ff">Detectando Free Fire...</string>
+    <string name="scan_engine">Calibrando motor de sensibilidad...</string>
+    <string name="scan_final">Finalizando cálculos...</string>
+
+    <!-- FF Status -->
+    <string name="ff_checking">Verificando Free Fire...</string>
+    <string name="ff_unofficial">⚠️ FF No Oficial: </string>
+    <string name="ff_not_installed">ℹ️ Free Fire No Instalado</string>
+    <string name="ff_ok">✅ Free Fire </string>
+
+    <!-- Result -->
+    <string name="calibrated">% Calibrado</string>
+    <string name="tier_ultra">⚡ NIVEL ULTRA</string>
+    <string name="tier_high">🔥 NIVEL ALTO</string>
+    <string name="tier_mid">💎 NIVEL MEDIO</string>
+    <string name="tier_low">📱 NIVEL BAJO</string>
+    <string name="section_sensitivities">🎯 SENSIBILIDADES CALIBRADAS</string>
+    <string name="section_enter">📋 INGRESA EN FREE FIRE</string>
+    <string name="section_tips">💡 CONSEJOS PRO PARA TU DISPOSITIVO</string>
+    <string name="copied_ok">✅ ¡Sensibilidades copiadas!</string>
+
+    <!-- Sensitivity labels -->
+    <string name="label_general">General</string>
+    <string name="label_red_dot">Mira de Punto Rojo</string>
+    <string name="label_scope2x">Mira x2</string>
+    <string name="label_scope4x">Mira x4</string>
+    <string name="label_sniper">Mira Francotirador (8x)</string>
+    <string name="label_free_recoil">Free</string>
+    <string name="label_look">Cámara 360</string>
+    <string name="label_fire">Botón de Disparo</string>
+
+    <!-- Share text -->
+    <string name="share_title">🔥 FF SENS PRO — Sensibilidades Calibradas</string>
+    <string name="share_device">📱 Dispositivo: </string>
+    <string name="share_footer">Generado por FF Sens Pro</string>
+
+    <!-- Settings -->
+    <string name="settings_title">⚙️ Configuración</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_save">Guardar</string>
+    <string name="btn_settings">⚙️</string>
+
+    <!-- Tips -->
+    <string name="tip_high_hz">✅ Tu pantalla de %dHz te da una gran ventaja. Pon Free Fire en modo \'Ultra\'.</string>
+    <string name="tip_60hz">⚡ Tu pantalla va a 60Hz. Pon los gráficos de FF en \'Alto\'.</string>
+    <string name="tip_low_ram_tier">🔧 Cierra todas las apps en segundo plano para liberar RAM.</string>
+    <string name="tip_low_ram_mb">⚠️ Poca RAM disponible (%dMB). Libera memoria para sensibilidad consistente.</string>
+    <string name="tip_small_screen">📱 Pantalla pequeña detectada. Usa agarre de 3 dedos.</string>
+    <string name="tip_large_screen">📱 Pantalla grande detectada. Se recomienda 4 dedos o giroscopio.</string>
+    <string name="tip_modded">⚠️ AVISO: Tu Free Fire puede no ser oficial (%s). Los APK modificados pueden causar baneos.</string>
+    <string name="tip_no_ff">ℹ️ Free Fire no detectado. Ajustes calculados desde tus specs.</string>
+    <string name="tip_high_dpi">🎯 Pantalla de alta densidad. La mira de punto rojo está calibrada más baja para mayor precisión.</string>
+</resources>
